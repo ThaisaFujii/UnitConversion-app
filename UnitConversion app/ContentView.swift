@@ -17,7 +17,7 @@ struct ContentView: View {
     @State private var outputUnitValue = 2
     let outputUnits = ["meters", "kilometers","feet", "miles"]
     
-    var inputUnitAfterConvertionToOutput: String {
+    var convertion: String {
         
         var output = ""
         var input = Measurement(value: 0, unit: UnitLength.meters)
@@ -75,7 +75,7 @@ struct ContentView: View {
             }
                 
                 Section(header:Text("Check Output value here")){
-                    Text(inputUnitAfterConvertionToOutput)
+                    Text(convertion)
                 }
             }
             .navigationTitle("Unit Conversions")
